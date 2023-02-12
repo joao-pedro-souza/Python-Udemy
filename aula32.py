@@ -4,6 +4,20 @@ informe se este número é par ou ímpar. Caso o usuário não digite um número
 inteiro, informe que não é um número inteiro.
 """
 
+str_numero = input('Digite um número inteiro: ')
+int_numero = None
+
+try:
+    int_numero = int(str_numero)
+except:
+    print('Você não digitou um numero inteiro')
+
+if int_numero is not None:
+    if int_numero % 2 == 0:
+        print(f'{int_numero} é par')
+    else:
+        print(f'{int_numero} é ímpar')
+
 """
 Faça um programa que pergunte a hora ao usuário e, baseando-se no horário 
 descrito, exiba a saudação apropriada. Ex. 
