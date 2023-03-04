@@ -21,8 +21,8 @@ contrário disso:
     resultado é o valor da conta
 O segundo dígito do CPF é 0
 """
-cpf = '74682489070'
-nove_digitos = cpf[:9]
+cpf_usuario = '74682489070'
+nove_digitos = cpf_usuario[:9]
 soma_digitos = 0
 
 n = 10
@@ -55,5 +55,9 @@ if resto_divisao > 9:
 else:
     segundo_digito = resto_divisao
 
-print(primeiro_digito)
-print(segundo_digito)
+cpf_gerado = cpf_usuario[:9] + str(primeiro_digito) + str(segundo_digito)
+
+if cpf_usuario == cpf_gerado:
+    print('CPF Válido!')
+else:
+    print('CPF Inválido')
