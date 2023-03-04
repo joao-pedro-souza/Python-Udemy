@@ -23,3 +23,21 @@ contrário disso:
 
 O primeiro dígito do CPF é 7
 """
+cpf = '74682489070'
+nove_digitos = cpf[:9]
+soma_digitos = 0
+n = 10
+
+for digito in nove_digitos:
+    soma_digitos += int(digito) * n
+    n -= 1
+
+soma_vezes_10 = soma_digitos * 10
+resto_divisao = soma_vezes_10 % 11
+
+if resto_divisao > 9:
+    primeiro_digito = 0
+else:
+    primeiro_digito = resto_divisao
+
+print(primeiro_digito)
